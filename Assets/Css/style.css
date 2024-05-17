@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.calculator {
+    margin: auto;
+    /* margin-top: 200px; */
+    height: 575px;
+    width: 420px;
+    /* background-color: rgba(20, 20, 20, 0.932); */
+    border-radius: 10px;
+    background-color: black;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calc-section {
+    background-color: rgb(224, 224, 222);
+    padding-top: 60px;
+    /* margin-top: 250px; */
+    height: 700px;
+}
+
+.buttons button {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    /* background-color: rgba(20, 20, 20, 0.767); */
+    background-color: rgb(28, 28, 28);
+    border: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+#display {
+    height: 70px;
+    width: 90%;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    text-align: left;
+    font-size: 50px;
+    color: white;
+    margin: auto;
+    display: block;
+}
+
+.operator-btn {
+    background-color: rgb(255, 149, 0) !important;
+}
+
+.num-btn:hover {
+    filter: brightness(130%);
+}
+
+.num-btn:active {
+    filter: brightness(160%);
+}
+
+.operator-btn:hover {
+    filter: brightness(110%) !important
+}
+
+.operator-btn:active {
+    filter: brightness(120%) !important
+}
+
+img {
+    width: 200px !important;
+    height: 200px !important;
+    object-fit: contain !important;
+}
+
+.api {
+    padding-top: 40px;
+    height: 600px !important;
+}
+
+.start-btn,
+.try-btn,
+.reset-btn {
+    display: block !important;
+    margin: auto !important;
+}
+
+
+
+.game-starter,
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 50px; */
+    gap: 10px;
+    width: 500px;
+    margin: auto;
+}
+
+.game {
+    margin-top: 50px;
+}
+
+.game-starter {
+    padding-top: 30px;
+}
+
+.gtn-tries,
+.gtn-guesses {
+    width: 200px !important;
+}
+
+.display {
+    width: 800px;
+    height: 50px;
+    color: black;
+    font-size: 15px;
+    text-align: center;
+    border: none;
+}
+
+.gtn {
+    height: 550px;
+    background-color: rgb(167, 166, 166);
+}
+
+h1 {
+    margin-left: 50px;
+
+}
+
+.playbtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.playbtns button {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    cursor: pointer;
+    background-color: #379683;
+}
+
+.playbtns button:hover {
+    background-color: #61d4bc;
+}
+
+.playbtns button:active {
+    background-color: #95f8e3;
+}
+
+.choicescreen {
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.gameresult {
+    margin: 100px auto;
+    display: block;
+    border: none;
+    background-color: transparent;
+    color: black;
+    font-size: 30px;
+}
+
+.rps {
+    background-color: #5D5C61;
+    font-family: cursive;
+    height: 600px;
+}
+
+.start-btn-gtw,
+.try-btn-gtw,
+.reset-btn-gtw {
+    display: block;
+    margin: auto;
+}
+
+.game-starter-gtw,
+.game-gtw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 50px; */
+    gap: 10px;
+    width: 500px;
+    margin: auto;
+}
+
+.gtw-tries,
+.gtw-guess {
+    width: 200px !important;
+}
+
+.display-gtw {
+    width: 800px;
+    height: 50px;
+    color: black;
+    font-size: 15px;
+    text-align: center;
+    border: none;
+    background-color: white;
+}
+
+.display-word {
+    width: 150px;
+    border: none;
+    height: 30px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+/* input {
+    width: 230px;
+} */
+
+h3 {
+    margin: auto;
+    display: block;
+}
+
+.gtw {
+    height: 600px;
+    background-color: #cfe0dd;
+}
+
+.game-gtw {
+    margin-top: 50px;
+}
+
+.game-starter-gtw {
+    padding-top: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin: 15px;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+}

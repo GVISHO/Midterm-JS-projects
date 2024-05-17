@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Midterm JS Projects" />
+    <meta name="description" content="JS Projects website" />
+    <meta
+      name="keywords"
+      content="html, css, js, javascript, project,Midterm,"
+    />
+    <meta
+      property="og:url"
+      content="https://github.com/GVISHO/Midterm-JS-projects/"
+    />
+    <meta property="og:type" content="Website" />
+    <meta property="og:title" content="JS-Projects BY GVISHO" />
+    <meta property="og:description" content="JS Projects website" />
+    <meta
+      property="og:image"
+      content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmTdQ4gwAnc9LvtARcUlS27LI26Uzhw3nvmPxxb1SC6Q&s"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:type" content="Website" />
+    <meta property="twitter:title" content="JS-Projects by GVISHO" />
+    <meta property="twitter:description" content="JS Projects website" />
+    <meta
+      property="twitter:image"
+      content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmTdQ4gwAnc9LvtARcUlS27LI26Uzhw3nvmPxxb1SC6Q&s"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/kisspng-website-development-javascript-html5-css3-cascadin-appload-comprehensive-software-and-mobile-app-de-5b7b834e216377.0246733915348211981368.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./Assets/Css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>Projects</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="#calculator">Calc</a>
+        </li>
+        <li><a href="#gtn">GTN</a></li>
+        <li><a href="#RPS">RPS</a></li>
+        <li><a href="#gtw">GTW</a></li>
+        <li><a href="#api">API</a></li>
+      </ul>
+    </nav>
+    <main class="w-100">
+      <section class="calc-section" id="calculator">
+        <div class="calculator">
+          <input id="display" readonly />
+          <div class="buttons">
+            <button class="operator-btn" onclick="clearDisplay()">C</button>
+            <button class="num-btn" onclick="addToDisplay('7')">7</button>
+            <button class="num-btn" onclick="addToDisplay('8')">8</button>
+            <button class="num-btn" onclick="addToDisplay('9')">9</button>
+            <button class="operator-btn" onclick="addToDisplay('+')">+</button>
+            <button class="num-btn" onclick="addToDisplay('4')">4</button>
+            <button class="num-btn" onclick="addToDisplay('5')">5</button>
+            <button class="num-btn" onclick="addToDisplay('6')">6</button>
+            <button class="operator-btn" onclick="addToDisplay('-')">-</button>
+            <button class="num-btn" onclick="addToDisplay('1')">1</button>
+            <button class="num-btn" onclick="addToDisplay('2')">2</button>
+            <button class="num-btn" onclick="addToDisplay('3')">3</button>
+            <button class="operator-btn" onclick="addToDisplay('*')">*</button>
+            <button class="num-btn" onclick="addToDisplay('0')">0</button>
+            <button class="num-btn" onclick="addToDisplay('.')">.</button>
+            <button class="num-btn" onclick="calculate()">=</button>
+            <button class="operator-btn" onclick="addToDisplay('/')">/</button>
+            <button class="operator-btn" onclick="addToDisplay('/100*')">
+              %
+            </button>
+            <button class="operator-btn" onclick="addToDisplay('**')">^</button>
+            <button class="operator-btn" onclick="toggleSign()">+/-</button>
+          </div>
+        </div>
+      </section>
+      <section class="gtn" id="gtn">
+        <section class="game-starter">
+          <h2>Guess the number</h2>
+          <h3>Number of tries</h3>
+          <!-- <input
+            id="tries-inpt"
+            type="number"
+            max="10"
+            placeholder="Input number from 1-10"
+          /> -->
+          <div class="input-group gtn-tries mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >1-10</span
+            >
+            <input
+              type="number"
+              class="form-control tries-input"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              max="10"
+              min="1"
+            />
+          </div>
+          <button class="start-btn btn btn-success" onclick="startGame()">
+            Start the game
+          </button>
+        </section>
+        <section class="game">
+          <input class="display" readonly disabled />
+          <!-- <input
+            type="text"
+            class="number-inpt"
+            max="100"
+            min="0"
+            placeholder="Type in number from 0 to 100"
+          /> -->
+          <div class="input-group gtn-guesses mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >1-100</span
+            >
+            <input
+              type="number"
+              class="form-control guess-input"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              max="100"
+              min="1"
+            />
+          </div>
+          <button class="try-btn btn btn-success" onclick="checkingNumber()">
+            Try your Luck!
+          </button>
+          <button class="reset-btn btn btn-danger" onclick="reset()">
+            Restart
+          </button>
+        </section>
+      </section>
+      <section class="rps" id="RPS">
+        <h1>Rock Paper Scissors</h1>
+        <section class="playbtns">
+          <button onclick="playGame('rock')">👊</button>
+          <button onclick="playGame('paper')">✋</button>
+          <button onclick="playGame('scissors')">✌️</button>
+        </section>
+        <h3 class="choicescreen"></h3>
+        <input class="gameresult" readonly disabled />
+      </section>
+      <section class="gtw" id="gtw">
+        <section class="game-starter-gtw">
+          <h2>Guess the word</h2>
+          <h3>Number of incorrect tries</h3>
+          <!-- <input
+              id="tries-inpt"
+              type="number"
+              max="10"
+              placeholder="Input number from 1-10"
+            /> -->
+          <div class="input-group gtw-tries mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >1-10</span
+            >
+            <input
+              type="number"
+              class="form-control tries-input-gtw"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              max="10"
+              min="1"
+            />
+          </div>
+          <button class="start-btn-gtw btn btn-success" onclick="startGame()">
+            Start the game
+          </button>
+        </section>
+        <section class="game-gtw">
+          <input class="display-word" readonly disabled />
+          <input class="display-gtw" readonly disabled />
+          <!-- <input
+              type="text"
+              class="number-inpt"
+              max="100"
+              min="0"
+              placeholder="Type in number from 0 to 100"
+            /> -->
+          <div class="input-group gtw-guess mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >a-z</span
+            >
+            <input
+              type="text"
+              class="form-control guess-input-gtw"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              maxlength="1"
+            />
+          </div>
+          <button class="try-btn-gtw btn btn-success" onclick="checkingWord()">
+            Try your Luck!
+          </button>
+          <button class="reset-btn-gtw btn btn-danger" onclick="reset()">
+            Restart
+          </button>
+        </section>
+      </section>
+      <section class="api" id="api">
+        <label for="product" class="form-label">Search</label>
+        <div class="input-group mb-3">
+          <input
+            type="search"
+            id="product"
+            class="form-control"
+            placeholder="Search products"
+          />
+          <span class="input-group-text" id="searchBtn">
+            <i class="bi bi-search"></i>
+          </span>
+        </div>
+        <button class="clearBtn btn btn-secondary">Clear</button>
+        <section class="display-table">
+          <table class="table w-100">
+            <thead>
+              <tr>
+                <th>Brand</th>
+                <th>Category</th>
+                <th>Model</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Preview</th>
+              </tr>
+            </thead>
+            <tbody id="displayproduct"></tbody>
+          </table>
+        </section>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Assets/Javascript/main.js"></script>
+  </body>
+</html>
