@@ -47,6 +47,7 @@ function startGame() {
     alert("Tries should be more than 0 and lower than 10");
   }
   triesInput.value = "";
+  displayGtn.value = "The game has started type your guess below";
   console.log(config.random);
 }
 function checkingNumber() {
