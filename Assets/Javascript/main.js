@@ -158,7 +158,7 @@ const configGtw = {
   randomGtw: "",
   length: 0,
 };
-function startGame() {
+function startGameGTW() {
   var randomWord =
     configGtw.wordList[Math.floor(Math.random() * configGtw.wordList.length)];
   console.log(randomWord);
@@ -215,7 +215,7 @@ function checkingWord() {
   }
   guessInputGtw.value = "";
 }
-function reset() {
+function resetGTW() {
   displayGtw.value = "";
   displayWord.value = "";
   guessInputGtw.value = "";
@@ -271,7 +271,7 @@ guessInputGtw.addEventListener("keyup", (event) => {
 });
 triesInputGtw.addEventListener("keyup", (event) => {
   if (event.key === "Enter") {
-    startGame();
+    startGameGTW();
   }
 });
 let value1 = "_ _ _ _";
